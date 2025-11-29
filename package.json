@@ -1,0 +1,25 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "LeetCode's problems solved.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorge-tb/LeetCode.git"
+  },
+  "keywords": [
+    "LeetCode",
+    "algorithm",
+    "problem-solving",
+    "JavaScript"
+  ],
+  "author": "Jorge Tomé Blanco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jorge-tb/LeetCode/issues"
+  },
+  "homepage": "https://github.com/jorge-tb/LeetCode#readme"
+}

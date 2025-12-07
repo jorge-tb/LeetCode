@@ -18,10 +18,12 @@ const search = function (nums, target) {
         let middleIndex = floorMiddle(min, max + 1);
         let middle = nums[middleIndex];
 
-        if (middle === target) // 0. If middle element is the target, return it
+        // 0. If middle element is the target, return it
+        if (middle === target)
             return middleIndex;
 
-        if (min === max) // 1. If middle element is not the target and min === max means target doesn't exist
+        // 1. If middle element is not the target and min === max means target doesn't exist or min > max caused by triying to consider rotated segment when it doesn't exist
+        if (min === max || min > max)
             return -1;
 
         if (isRotated(middleIndex)) {
@@ -56,15 +58,19 @@ const search = function (nums, target) {
     }
 }
 
-const nums_1 = [4,5,6,7,8,9,1,2,3];
-console.log(`nums_1 = ${JSON.stringify(nums_1)}`);
-for (let i = 0; i < nums_1.length; i++) {
-    console.log(`target=${nums_1[i]} is in position=${search(nums_1, nums_1[i])}`);
-}
+// -- Tests --
+// const nums_1 = [4,5,6,7,8,9,1,2,3];
+// console.log(`nums_1 = ${JSON.stringify(nums_1)}`);
+// for (let i = 0; i < nums_1.length; i++) {
+//     console.log(`target=${nums_1[i]} is in position=${search(nums_1, nums_1[i])}`);
+// }
 
-const nums_2 = [7,8,9,1,2,3,4,5,6];
-console.log(`nums_2 = ${JSON.stringify(nums_2)}`);
-for (let i = 0; i < nums_2.length; i++) {
-    console.log(`target=${nums_2[i]} is in position=${search(nums_2, nums_2[i])}`);
-}
+// const nums_2 = [7,8,9,1,2,3,4,5,6];
+// console.log(`nums_2 = ${JSON.stringify(nums_2)}`);
+// for (let i = 0; i < nums_2.length; i++) {
+//     console.log(`target=${nums_2[i]} is in position=${search(nums_2, nums_2[i])}`);
+// }
+
+// const nums_3 = [1,3];
+// search(nums_3, 0);
 
